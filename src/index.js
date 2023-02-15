@@ -1,9 +1,10 @@
 const express = require('express');
+const routers = require('../src/routers');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.json('Hello')
-});
+app.use(routers);
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('Running Server')
+});
