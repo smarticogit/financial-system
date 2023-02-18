@@ -1,0 +1,6 @@
+//Create User
+{
+    "name": "Daniel",
+    "email": "daniel@email.com",
+    "password": "senha123"
+}

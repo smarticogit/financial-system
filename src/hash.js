@@ -1,0 +1,1 @@
+module.exports = 's3nh4s3cr3t4';
