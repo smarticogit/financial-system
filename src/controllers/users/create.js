@@ -9,13 +9,10 @@ const create = async (req, res) => {
     }
 
     try {
-        const alreadyUser = await knex('users').where({ email }).returning();
+        const alreadyUser = await knex('users').where({ email }).first();
 
         if (alreadyUser) {
-            return res.status(400).json({
-                message: "Email already exists",
-                field: email
-            });
+            return res.status(400).json({ message: "Email already exists" });
         };
 
         const encrypt = await bcrypt.hash(password, 10);
@@ -35,7 +32,7 @@ const create = async (req, res) => {
     } catch (error) {
         return res.status(400).json({ message: error.message });
     }
-    return res.json("Create User")
+    return res.status(201).json("Create User")
 }
 
 module.exports = { create } 

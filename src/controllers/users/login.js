@@ -8,13 +8,17 @@ const login = async (req, res) => {
     try {
         const foundUser = await knex('users').where({ email }).first();
 
+        if (!foundUser) {
+            return res.status(401).json({ mensagem: "User does not exist" })
+        }
+
         const token = jwt.sign(
             {
                 userId: foundUser.id,
                 userName: foundUser.name
             }, secretKey,
             {
-                expiresIn: '1h'
+                expiresIn: 300
             }
         );
 
