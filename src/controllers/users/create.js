@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
 const knex = require('../../conexao');
+const logger = require('../../utils/logger');
 
 const create = async (req, res) => {
     const { name, email, password } = req.body;
@@ -29,10 +30,11 @@ const create = async (req, res) => {
             return res.status(400).json({ message: "User not created!" });
         }
 
+        logger.info(`User ${user.name} Created`)
+        return res.status(201).json("User Created")
     } catch (error) {
         return res.status(400).json({ message: error.message });
     }
-    return res.status(201).json("Create User")
 }
 
 module.exports = { create } 

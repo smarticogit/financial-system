@@ -8,11 +8,11 @@ const authentication = async (req, res, next) => {
     try {
         const token = authorization.replace('Bearer ', '').trim();
 
-        const { userId, userName } = jwt.verify(token, secretKey);
+        const { userId } = jwt.verify(token, secretKey);
 
         const userFound = await knex('users').where('id', userId).first();
 
-        const {password: _, ...user} = userFound;
+        const { password: _, ...user } = userFound;
 
         req.user = user;
 

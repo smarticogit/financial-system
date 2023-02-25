@@ -5,6 +5,10 @@ const bcrypt = require('bcrypt');
 const edit = async (req, res) => {
     const { name, email, password } = req.body;
 
+    if(!name || !email || !password) {
+        return res.status(400).json({ message: 'Invalid values in fields' });
+    }
+
     try {
         const user = await knex('users').where({ email }).first();
 

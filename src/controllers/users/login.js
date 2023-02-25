@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const knex = require('../../conexao');
 const secretKey = require('../../hash');
+const logger = require('../../utils/logger');
 
 const login = async (req, res) => {
     const { email, password } = req.body
@@ -18,11 +19,13 @@ const login = async (req, res) => {
                 userName: foundUser.name
             }, secretKey,
             {
-                expiresIn: 300
+                expiresIn: 1000
             }
         );
 
         const { password: _, ...user } = foundUser;
+
+        logger.info(`User ${user.name} logged`)
 
         return res.status(200).json({ user, token })
     } catch (error) {

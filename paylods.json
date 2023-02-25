@@ -1,11 +1,26 @@
-//Create User
-{
-    "name": "Daniel",
-    "email": "daniel@email.com",
-    "password": "senha123"
-}
-//login
-{
-    "email": "daniel@email.com",
-    "password": "senha123"
-}
+[
+    {
+        "name": "Daniel",
+        "email": "daniel@email.com",
+        "password": "senha123"
+    },
+    {
+        "email": "daniel@email.com",
+        "password": "senha123"
+    },
+    {
+        "name": "Maria",
+        "email": "maria@email.com",
+        "cpf": "30040050027",
+        "phone": "11995196653",
+        "zipcode": "08536120",
+        "number": "87"
+    },
+    {
+        "customer_id": 1,
+        "Description": "Compra mercado livre",
+        "status": "pending",
+        "amount": 5000,
+        "due_date": "2023-02-30"
+    }
+]
