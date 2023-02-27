@@ -40,10 +40,15 @@ create table if not exists billings (
 	customer_id integer not null,
 	description text not null,
 	status text not null,
-  	amount money,
+  	amount decimal(10,2),
   	due_date date not null,
 	created date,
 	updated date,
 	createdBy text,
   	foreign key (customer_id) references customers (id)
 );
+
+ALTER TABLE billings ALTER COLUMN amount decimal(10,2);
+
+ALTER TABLE billings ALTER COLUMN amount TYPE decimal(10,2) USING amount::numeric(10,2);
+

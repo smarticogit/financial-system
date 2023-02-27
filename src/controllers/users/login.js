@@ -19,7 +19,7 @@ const login = async (req, res) => {
                 userName: foundUser.name
             }, secretKey,
             {
-                expiresIn: 1000
+                expiresIn: 10000
             }
         );
 
@@ -33,4 +33,4 @@ const login = async (req, res) => {
     }
 }
 
-module.exports = { login }
+module.exports = { login };

@@ -10,7 +10,10 @@ const customersEdit = require('./controllers/customers/edit');
 const customersCreate = require('./controllers/customers/create');
 const billingCreate = require('./controllers/billing/create');
 const billingList = require('./controllers/billing/list');
-const { schemaUsers, schemaCustomers, schemaBillings } = require('./validation/fieldsValidations');
+const billingGet = require('./controllers/billing/get');
+const billingEdit = require('./controllers/billing/edit');
+const billingDel = require('./controllers/billing/delete');
+const { schemaUsers, schemaCustomers, schemaBillings, schemaBillingsUpdate } = require('./validation/fieldsValidations');
 
 const express = require('express');
 
@@ -25,11 +28,14 @@ routers.get('/users', usersList.list);
 routers.put('/users', validate(schemaUsers), usersEdit.edit);
 
 routers.get('/customers', customers.list);
-routers.get('/customers/:id', customersGet.get)
-routers.put('/customers/:id', customersEdit.edit);
+routers.get('/customers/:id', customersGet.get);
+routers.put('/customers/:id', validate(schemaCustomers), customersEdit.edit);
 routers.post('/customers', validate(schemaCustomers), customersCreate.create);
 
-routers.post('/billings', validate(schemaBillings),billingCreate.create);
-routers.get('/billings', billingList.list)
+routers.post('/billings', validate(schemaBillings), billingCreate.create);
+routers.get('/billings', billingList.list);
+routers.get('/billings/:id', billingGet.get);
+routers.put('/billings/:id', validate(schemaBillingsUpdate), billingEdit.edit);
+routers.delete('/billings/:id', billingDel.del)
 
 module.exports = routers;

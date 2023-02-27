@@ -1,26 +1,11 @@
-
-[2023-02-24T22:52:53.707] [INFO] default - User Maicon logged
-[2023-02-24T22:53:06.376] [INFO] default - User fulano logged
-[2023-02-24T22:53:12.476] [INFO] default - fulano listed Users
-[2023-02-24T22:53:20.524] [INFO] default - getted customer id: 1
-[2023-02-24T22:53:49.160] [INFO] default - user: fulano Listing billings
-[2023-02-24T22:54:16.523] [INFO] default - fulano listed Customers
-[2023-02-24T22:55:31.378] [INFO] default - user: fulano Listing billings
-[2023-02-24T22:56:16.955] [INFO] default - fulano listed Customers
-[2023-02-24T22:56:29.789] [INFO] default - user: fulano Listing billings
-[2023-02-24T23:11:54.691] [INFO] default - User fulano logged
-[2023-02-24T23:18:20.211] [INFO] default - user: fulano Listing billings
-[2023-02-24T23:20:16.565] [INFO] default - user: fulano Listing billings
-[2023-02-24T23:22:55.617] [INFO] default - user: fulano Listing billings
-[2023-02-24T23:24:32.979] [INFO] default - user: fulano Listing billings
-[2023-02-24T23:27:18.037] [INFO] default - user: fulano Billing: insert into "billings" ("amount", "created", "createdby", "customer_id", "description", "due_date", "status", "updated") values ($1, $2, $3, $4, $5, $6, $7, $8) returning * - date/time field value out of range: "2023-02-30T03:00:00.000Z"
-[2023-02-24T23:27:52.288] [INFO] default - user: fulano Billing: insert into "billings" ("amount", "created", "createdby", "customer_id", "description", "due_date", "status", "updated") values ($1, $2, $3, $4, $5, $6, $7, $8) returning * - date/time field value out of range: "2023-02-30T03:00:00.000Z"
-[2023-02-24T23:28:27.891] [INFO] default - user: fulano Billing: insert into "billings" ("amount", "created", "createdby", "customer_id", "description", "due_date", "status", "updated") values ($1, $2, $3, $4, $5, $6, $7, $8) returning * - date/time field value out of range: "2023-02-30T03:00:00.000Z"
-[2023-02-24T23:29:25.013] [INFO] default - User fulano logged
-[2023-02-24T23:31:05.586] [INFO] default - user: fulano Billing: insert into "billings" ("amount", "created", "createdby", "customer_id", "description", "due_date", "status", "updated") values ($1, $2, $3, $4, $5, $6, $7, $8) returning * - date/time field value out of range: "2023-02-30T03:00:00.000Z"
-[2023-02-24T23:33:26.047] [INFO] default - user: fulano Billing: insert into "billings" ("amount", "created", "createdby", "customer_id", "description", "due_date", "status", "updated") values ($1, $2, $3, $4, $5, $6, $7, $8) returning * - date/time field value out of range: "2023-02-30T03:00:00.000Z"
-[2023-02-24T23:35:30.244] [INFO] default - user: fulano Billing: insert into "billings" ("amount", "created", "createdby", "customer_id", "description", "due_date", "status", "updated") values ($1, $2, $3, $4, $5, $6, $7, $8) returning * - date/time field value out of range: "2023-02-30T03:00:00.000Z"
-[2023-02-24T23:36:51.894] [INFO] default - user: fulano Billing Created
-[2023-02-24T23:37:01.434] [INFO] default - user: fulano Listing billings
-[2023-02-24T23:37:50.183] [INFO] default - user: fulano Listing billings
-[2023-02-24T23:38:21.127] [INFO] default - user: fulano Listing billings
+[2023-02-26T22:13:21.880] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:19:20.233] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:19:21.772] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:19:35.920] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:20:41.508] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:20:46.907] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:23:14.007] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:25:20.884] [WARN] default - billingId: 3 Updated
+[2023-02-26T22:25:27.601] [INFO] default - user: daniel Listing billings
+[2023-02-26T22:26:40.143] [INFO] default - user: daniel Getting billing 3
+[2023-02-26T22:32:16.698] [INFO] default - daniel listed Users

@@ -25,4 +25,12 @@ const schemaBillings = joi.object({
     due_date: joi.string().required(),
 });
 
-module.exports = { schemaUsers, schemaCustomers, schemaBillings}; 
+const schemaBillingsUpdate = joi.object({
+    description: joi.string().trim().required(),
+    status: joi.string().required(),
+    amount: joi.number(),
+    due_date: joi.string().required(),
+});
+
+
+module.exports = { schemaUsers, schemaCustomers, schemaBillings, schemaBillingsUpdate }; 

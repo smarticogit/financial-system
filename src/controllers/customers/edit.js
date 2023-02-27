@@ -75,7 +75,7 @@ const edit = async (req, res) => {
             return res.status(400).json({ message: "User not created!" });
         }
 
-        logger.warn(`CustomerId: ${customerId} Updated`)
+        logger.info(`CustomerId: ${customerId} Updated`);
         return res.status(200).json({ message: "Customer Updated" });
     } catch (error) {
         return res.status(400).json({ message: error.message });
