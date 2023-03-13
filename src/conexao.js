@@ -9,4 +9,12 @@ const knex = require('knex')({
     }
 });
 
+knex.raw('SELECT 1')
+  .then(() => {
+    console.log('Connected in DataBase');
+  })
+  .catch((error) => {
+    console.error('Erro ao conectar ao banco de dados:', error);
+  });
+
 module.exports = knex;
